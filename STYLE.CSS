@@ -1,0 +1,195 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fontes e cores */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7cad4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header com fundo da cor predominante da logo */
+header {
+    background-color: #ffffff; /* cor rosada suave combinando com logo */
+    text-align: center;
+    padding: 20px 15px 40px;
+}
+
+/* Container da logo para centralizar e limitar tamanho */
+.logo-container {
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* Logo topo responsiva */
+.logo-topo {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+/* Subtítulo abaixo da logo */
+.subtitulo {
+    font-size: 1.2em;
+    margin: 20px 0 20px;
+    font-family: 'Playfair Display', serif;
+    color: #b85c5c;
+}
+
+/* Botão agendar */
+.btn-agendar {
+    display: inline-block;
+    padding: 12px 28px;
+    background: #b85c5c;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: background 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.btn-agendar:hover,
+.btn-agendar:focus {
+    background: #9e4949;
+    outline: none;
+}
+
+/* Conteúdo principal */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 15px 60px;
+}
+
+/* Seções */
+section {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+/* Títulos das seções */
+section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2em;
+    color: #b85c5c;
+    margin-bottom: 20px;
+}
+
+/* Parágrafos */
+section p {
+    font-size: 1.1em;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #555;
+}
+
+/* Lista de serviços */
+#servicos ul {
+    list-style: none;
+    padding: 0;
+}
+
+#servicos li {
+    font-size: 1.1em;
+    margin: 12px 0;
+    color: #444;
+}
+
+/* Galeria de imagens */
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.galeria img {
+    width: 250px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.galeria img:hover,
+.galeria img:focus {
+    transform: scale(1.05);
+    outline: none;
+}
+
+/* Rodapé */
+footer {
+    background-color: #b85c5c;
+    color: #fff;
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 0.95em;
+    margin-top: 60px;
+}
+
+/* Pequenos ajustes no rodapé */
+footer p + p {
+    margin-top: 8px;
+}
+
+/* --- Responsividade --- */
+
+/* Logo menor em telas menores */
+@media (max-width: 600px) {
+    .logo-container {
+        max-width: 180px;
+    }
+
+    .subtitulo {
+        font-size: 1em;
+        margin: 15px 0 15px;
+    }
+
+    .btn-agendar {
+        padding: 10px 24px;
+        font-size: 1em;
+        margin-bottom: 15px;
+    }
+
+    main {
+        padding: 15px 10px 40px;
+    }
+
+    section h2 {
+        font-size: 1.6em;
+        margin-bottom: 15px;
+    }
+
+    section p,
+    #servicos li {
+        font-size: 1em;
+    }
+}
+
+/* Galeria responsiva */
+@media (max-width: 700px) {
+    .galeria img {
+        width: 45vw;
+        max-width: 220px;
+    }
+}
+
+@media (max-width: 400px) {
+    .galeria {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .galeria img {
+        width: 80vw;
+        max-width: none;
+    }
+}
